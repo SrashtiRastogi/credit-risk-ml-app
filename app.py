@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
+import os
 
 app = Flask(__name__)
 
@@ -51,9 +52,6 @@ def predict():
 
     return render_template("result.html",prediction_text=result)
 
-if __name__=="__main__":
-
-    import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
