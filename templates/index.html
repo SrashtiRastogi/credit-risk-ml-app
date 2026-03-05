@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Credit Risk Predictor</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Credit Risk Prediction</h1>
+
+<form action="/predict" method="post">
+
+<label>Loan Amount</label>
+<input type="number" name="loan_amnt" required>
+
+<label>Term</label>
+<input type="number" name="term" required>
+
+<label>Interest Rate</label>
+<input type="number" step="0.01" name="int_rate" required>
+
+<label>Installment</label>
+<input type="number" step="0.01" name="installment" required>
+
+<label>Annual Income</label>
+<input type="number" name="annual_inc" required>
+
+<label>DTI</label>
+<input type="number" step="0.01" name="dti" required>
+
+<label>Grade</label>
+
+<select name="grade">
+<option value="B">B</option>
+<option value="C">C</option>
+<option value="D">D</option>
+<option value="E">E</option>
+<option value="F">F</option>
+<option value="G">G</option>
+</select>
+
+<button type="submit">Predict Risk</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
